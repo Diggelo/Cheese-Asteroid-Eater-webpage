@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheese Asteroid Eater | Cosmic Cheese Hunting Fun</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FFD700;
+            --bg-dark: #0a0a12;
+            --glass: rgba(255, 255, 255, 0.1);
+            --accent: #4CAF50;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            background-image: url('media/background_space.png');
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 5%;
+            backdrop-filter: blur(15px);
+            background: rgba(0,0,0,0.6);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .nav-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .app-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+        }
+
+        h1 { margin: 0; font-size: 1.2rem; letter-spacing: -0.5px; }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: var(--glass);
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover { background: rgba(255,255,255,0.2); }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 20px 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .main-logo {
+            max-width: 320px;
+            width: 80%;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.4));
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .mastermind-tag {
+            background: rgba(255, 215, 0, 0.2);
+            color: var(--primary);
+            padding: 6px 15px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border: 1px solid var(--primary);
+        }
+
+        .btn-store {
+            cursor: pointer;
+            transition: transform 0.2s;
+            max-width: 180px;
+            margin-top: 20px;
+        }
+
+        .btn-store:hover { transform: scale(1.05); }
+
+        /* Container & Cards */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .feature-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .feature-card { grid-template-columns: 1fr; text-align: center; padding: 30px; }
+            .feature-card img { order: -1; width: 120px; }
+            .hero { padding-top: 60px; }
+        }
+
+        .feature-img { max-width: 160px; margin: 0 auto; }
+        
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .floating-cheese { animation: rotate 12s linear infinite; }
+        .floating-player { animation: float 3s ease-in-out infinite; }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Footer Area */
+        footer {
+            background-image: linear-gradient(to top, rgba(0,0,0,0.8), transparent), url('media/moon_surface.png');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 20px 50px;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            background: rgba(0,0,0,0.5);
+            padding: 10px 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: 0.2s;
+        }
+
+        .footer-links a:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            opacity: 0.6;
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-content">
+            <img src="media/App_icon.png" alt="Icon" class="app-icon">
+            <h1>Cheese Asteroid Eater</h1>
+        </div>
+        <div class="nav-links">
+            <a href="https://apps.apple.com/us/developer/joachim-svendsr%C3%B8d/id1864044398" target="_blank">More Apps</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="mastermind-tag">IDEA BY IVER GALLIS</div>
+        <img src="media/logo.png" alt="Cheese Asteroid Eater Logo" class="main-logo">
+        <p style="font-size: 1.2rem; opacity: 0.9;">Cosmic Cheese Hunting Fun!</p>
+        
+        <div class="btn-store">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store Placeholder">
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="feature-card">
+            <div>
+                <h2>Munch in Space</h2>
+                <p>Control the Asteroid Eater and hunt down delicious golden cheese asteroids. Every piece of cheese counts toward your galactic high score!</p>
+            </div>
+            <img src="media/cheese_asteroid.png" alt="Cheese" class="feature-img floating-cheese">
+        </div>
+
+        <div class="feature-card">
+            <img src="media/player_green.png" alt="Player" class="feature-img floating-player">
+            <div>
+                <h2>Dodge & Survive</h2>
+                <p>Avoid high-speed satellites and space debris. One crash could be your last meal in this endless cosmic chase!</p>
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <div>
+                <h2>Save the Moon</h2>
+                <p>Every cheese asteroid you miss triggers a lunar quake. Protect the surface and climb the Game Center leaderboards to become the ultimate eater.</p>
+            </div>
+            <img src="media/satellite.png" alt="Satellite" class="feature-img" style="filter: drop-shadow(0 0 15px #ff4444);">
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="https://forms.gle/WZGaELbCm3pG6Szz5" target="_blank">Contact Support</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="https://apps.apple.com/us/developer/joachim-svendsr%C3%B8d/id1864044398" target="_blank">Developer Profile</a>
+        </div>
+        <p class="copyright">
+            &copy; 2026 Cheese Asteroid Eater. Created by Joachim Svendsrød.<br>
+            All rights reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
