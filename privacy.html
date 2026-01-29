@@ -22,34 +22,47 @@
             padding: 40px;
             border-radius: 20px;
             backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
         }
-        h1 { color: #FFD700; }
+        h1 { color: #FFD700; margin-bottom: 10px; }
+        h2 { color: #FFD700; margin-top: 30px; font-size: 1.2em; }
         a { color: #FFD700; text-decoration: none; }
+        a:hover { text-decoration: underline; }
         .back-link { display: block; margin-bottom: 20px; font-weight: bold; }
+        .date { opacity: 0.6; font-size: 0.9em; margin-bottom: 30px; }
     </style>
 </head>
 <body>
     <div class="content">
         <a href="index.html" class="back-link">&larr; Back to Game</a>
         <h1>Privacy Policy</h1>
-        <p>Last updated: January 2026</p>
+        <p class="date">Last updated: January 29, 2026</p>
         
-        <p>Cheese Asteroid Eater ("we", "our", or "us") is built to be a safe and fun experience. This policy explains how we handle data.</p>
+        <p>Cheese Asteroid Eater ("we", "our", or "us") is dedicated to providing a safe and fun experience. This policy explains how we handle your data when you play our game.</p>
 
-        <h2>1. Game Center</h2>
-        <p>Our game uses Apple Game Center to provide leaderboards and achievements. This data is handled by Apple. We do not store your personal Game Center information on our own servers.</p>
+        <h2>1. Local Data Storage</h2>
+        <p>We store your high scores and game settings (such as sound, music, and vibration preferences) locally on your device. This data stays on your phone and is not transmitted to our servers.</p>
 
-        <h2>2. Data Collection</h2>
-        <p>We do not collect personal identifiable information. Local high scores and settings (sound, music, vibration) are stored locally on your device via UserDefaults.</p>
+        <h2>2. Apple Game Center</h2>
+        <p>Our game integrates with Apple Game Center to provide global leaderboards. When you are logged in, Apple may collect data such as your player ID and scores. This information is handled exclusively by Apple according to their privacy policy.</p>
 
-        <h2>3. Third-Party Advertising</h2>
-        <p>The game may display advertisements. These providers may use identifiers (IDFA) to show relevant ads. You can opt-out of tracking through your iOS system settings.</p>
+        <h2>3. In-App Purchases</h2>
+        <p>If you choose to purchase "Remove Ads", the transaction is processed securely through Apple's StoreKit. We do not have access to your credit card information or financial details. We only receive a confirmation that the purchase was successful to unlock the feature.</p>
 
-        <h2>4. Children's Privacy</h2>
-        <p>Our game is designed for all ages and does not knowingly collect data from children.</p>
+        <h2>4. Advertising and Tracking</h2>
+        <p>We use Google AdMob to display advertisements. To provide a better experience, we use Apple's App Tracking Transparency (ATT) framework to ask for your permission to track activity.</p>
+        <ul>
+            <li><strong>Identifiers:</strong> If you opt-in, AdMob may use your device's advertising identifier (IDFA) to show personalized ads.</li>
+            <li><strong>Usage Data:</strong> AdMob may collect information about how you interact with ads (taps and views).</li>
+            <li><strong>Diagnostics:</strong> We may collect anonymized crash logs and performance data to improve the game's stability.</li>
+        </ul>
+        <p>You can change your tracking preferences at any time in your iOS System Settings under "Privacy & Security > Tracking".</p>
 
-        <h2>5. Contact</h2>
-        <p>If you have any questions, please contact us through the official support channels.</p>
+        <h2>5. Children's Privacy</h2>
+        <p>Cheese Asteroid Eater is designed for all ages. We do not knowingly collect any personally identifiable information from children.</p>
+
+        <h2>6. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us through the official support channels provided in the App Store.</p>
     </div>
 </body>
 </html>
