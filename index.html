@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,8 @@
             --accent: #4CAF50;
         }
 
-        body, html {
+        body,
+        html {
             margin: 0;
             padding: 0;
             font-family: 'Inter', sans-serif;
@@ -32,11 +34,11 @@
             justify-content: space-between;
             padding: 15px 5%;
             backdrop-filter: blur(15px);
-            background: rgba(0,0,0,0.6);
+            background: rgba(0, 0, 0, 0.6);
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .nav-content {
@@ -51,7 +53,11 @@
             border-radius: 10px;
         }
 
-        h1 { margin: 0; font-size: 1.2rem; letter-spacing: -0.5px; }
+        h1 {
+            margin: 0;
+            font-size: 1.2rem;
+            letter-spacing: -0.5px;
+        }
 
         .nav-links a {
             color: white;
@@ -64,7 +70,9 @@
             transition: 0.3s;
         }
 
-        .nav-links a:hover { background: rgba(255,255,255,0.2); }
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
 
         /* Hero Section */
         .hero {
@@ -101,7 +109,9 @@
             margin-top: 20px;
         }
 
-        .btn-store:hover { transform: scale(1.05); }
+        .btn-store:hover {
+            transform: scale(1.05);
+        }
 
         /* Container & Cards */
         .container {
@@ -116,7 +126,7 @@
             border-radius: 24px;
             padding: 40px;
             margin-bottom: 30px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             display: grid;
             grid-template-columns: 1fr 1fr;
             align-items: center;
@@ -124,30 +134,61 @@
         }
 
         @media (max-width: 768px) {
-            .feature-card { grid-template-columns: 1fr; text-align: center; padding: 30px; }
-            .feature-card img { order: -1; width: 120px; }
-            .hero { padding-top: 60px; }
+            .feature-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 30px;
+            }
+
+            .feature-card img {
+                order: -1;
+                width: 120px;
+            }
+
+            .hero {
+                padding-top: 60px;
+            }
         }
 
-        .feature-img { max-width: 160px; margin: 0 auto; }
-        
+        .feature-img {
+            max-width: 160px;
+            margin: 0 auto;
+        }
+
         /* Animations */
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
         }
 
-        .floating-cheese { animation: rotate 12s linear infinite; }
-        .floating-player { animation: float 3s ease-in-out infinite; }
+        .floating-cheese {
+            animation: rotate 12s linear infinite;
+        }
+
+        .floating-player {
+            animation: float 3s ease-in-out infinite;
+        }
 
         @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         /* Footer Area */
         footer {
-            background-image: linear-gradient(to top, rgba(0,0,0,0.8), transparent), url('media/moon_surface.png');
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent), url('media/moon_surface.png');
             background-size: cover;
             background-position: center;
             padding: 120px 20px 50px;
@@ -167,10 +208,10 @@
             color: white;
             text-decoration: none;
             font-weight: 500;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.5);
             padding: 10px 20px;
             border-radius: 12px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             transition: 0.2s;
         }
 
@@ -184,9 +225,9 @@
             opacity: 0.6;
             margin-top: 30px;
         }
-
     </style>
 </head>
+
 <body>
 
     <nav>
@@ -195,34 +236,37 @@
             <h1>Cheese Asteroid Eater</h1>
         </div>
         <div class="nav-links">
-            <a href="https://apps.apple.com/us/developer/joachim-svendsr%C3%B8d/id1864044398" target="_blank">More Apps</a>
+            <a href="https://diggelo-studios.pages.dev/" target="_blank">More Apps</a>
         </div>
     </nav>
 
-<section class="hero">
-    <div class="mastermind-tag">IDEA BY IVER GALLIS</div>
-    <img src="media/logo.png" alt="Cheese Asteroid Eater Logo" class="main-logo">
-    <p style="font-size: 1.2rem; opacity: 0.9;">Cosmic Cheese Hunting Fun!</p>
-    
-    <a href="https://apps.apple.com/us/app/cheese-asteroid-eater/id6758445792" target="_blank" class="btn-store-link">
-        <div class="btn-store">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store">
-        </div>
-    </a>
-</section>
+    <section class="hero">
+        <div class="mastermind-tag">IDEA BY IVER GALLIS</div>
+        <img src="media/logo.png" alt="Cheese Asteroid Eater Logo" class="main-logo">
+        <p style="font-size: 1.2rem; opacity: 0.9;">Cosmic Cheese Hunting Fun!</p>
 
-<style>
-    .btn-store-link {
-        text-decoration: none;
-        display: inline-block;
-    }
-</style>
+        <a href="https://apps.apple.com/us/app/cheese-asteroid-eater/id6758445792" target="_blank"
+            class="btn-store-link">
+            <div class="btn-store">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                    alt="Download on the App Store">
+            </div>
+        </a>
+    </section>
+
+    <style>
+        .btn-store-link {
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
 
     <div class="container">
         <div class="feature-card">
             <div>
                 <h2>Munch in Space</h2>
-                <p>Control the Asteroid Eater and hunt down delicious golden cheese asteroids. Every piece of cheese counts toward your galactic high score!</p>
+                <p>Control the Asteroid Eater and hunt down delicious golden cheese asteroids. Every piece of cheese
+                    counts toward your galactic high score!</p>
             </div>
             <img src="media/cheese_asteroid.png" alt="Cheese" class="feature-img floating-cheese">
         </div>
@@ -231,30 +275,34 @@
             <img src="media/player_green.png" alt="Player" class="feature-img floating-player">
             <div>
                 <h2>Dodge & Survive</h2>
-                <p>Avoid high-speed satellites and space debris. One crash could be your last meal in this endless cosmic chase!</p>
+                <p>Avoid high-speed satellites and space debris. One crash could be your last meal in this endless
+                    cosmic chase!</p>
             </div>
         </div>
 
         <div class="feature-card">
             <div>
                 <h2>Save the Moon</h2>
-                <p>Every cheese asteroid you miss triggers a lunar quake. Protect the surface and climb the Game Center leaderboards to become the ultimate eater.</p>
+                <p>Every cheese asteroid you miss triggers a lunar quake. Protect the surface and climb the Game Center
+                    leaderboards to become the ultimate eater.</p>
             </div>
-            <img src="media/satellite.png" alt="Satellite" class="feature-img" style="filter: drop-shadow(0 0 15px #ff4444);">
+            <img src="media/satellite.png" alt="Satellite" class="feature-img"
+                style="filter: drop-shadow(0 0 15px #ff4444);">
         </div>
     </div>
 
     <footer>
         <div class="footer-links">
-            <a href="https://forms.gle/WZGaELbCm3pG6Szz5" target="_blank">Contact Support</a>
+            <a href="https://forms.gle/N6xYobR1bftA4MDq6" target="_blank">Contact Support</a>
             <a href="privacy.html">Privacy Policy</a>
-            <a href="https://apps.apple.com/us/developer/joachim-svendsr%C3%B8d/id1864044398" target="_blank">Developer Profile</a>
+            <a href="https://diggelo-studios.pages.dev/" target="_blank">Developer Profile</a>
         </div>
         <p class="copyright">
-            &copy; 2026 Cheese Asteroid Eater. Created by Joachim Svendsrød.<br>
+            &copy; 2026 Cheese Asteroid Eater. Created by Diggelo Studios.<br>
             All rights reserved.
         </p>
     </footer>
 
 </body>
+
 </html>
